@@ -1479,3 +1479,1965 @@ footer {
     }
 
 }
+/* ==========================================
+   Employee Document Uploads
+   ========================================== */
+
+.document-upload-section {
+    margin-top: 25px;
+    padding-top: 10px;
+}
+
+.document-upload-section h3,
+.document-section-heading {
+    color: #1f3c88;
+    margin-top: 25px;
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.form-group input[type="file"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+}
+
+.form-group input[type="file"]::file-selector-button {
+    margin-right: 12px;
+    padding: 8px 12px;
+    border: 0;
+    border-radius: 4px;
+    background-color: #1f3c88;
+    color: #fff;
+    cursor: pointer;
+}
+
+.form-group input[type="file"]::file-selector-button:hover {
+    background-color: #162d68;
+}
+
+.document-help-text,
+.form-group small {
+    display: block;
+    margin-top: 6px;
+    color: #777;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.document-status {
+    display: block;
+    margin-top: 8px;
+    color: #666;
+    font-size: 13px;
+}
+
+.document-status.uploaded,
+.document-uploaded {
+    color: #218838;
+    font-weight: 600;
+}
+
+.document-status.missing,
+.document-missing {
+    color: #b33a3a;
+    font-weight: 600;
+}
+
+/* ==========================================
+   Employee Documents Display
+   ========================================== */
+
+.employee-documents-card,
+.document-list-container {
+    margin-bottom: 30px;
+    padding: 25px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.employee-documents-card h2,
+.document-list-container h2 {
+    margin-bottom: 20px;
+    color: #1f3c88;
+}
+
+.employee-document-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.employee-document-item {
+    min-width: 0;
+    padding: 16px;
+    border: 1px solid #e2e5eb;
+    border-radius: 7px;
+    background-color: #f8f9fa;
+}
+
+.employee-document-item h3 {
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 15px;
+}
+
+.employee-document-item p {
+    margin-bottom: 12px;
+    color: #666;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.document-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+.document-actions button,
+.document-actions a,
+.document-action-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #1f3c88;
+    color: #fff;
+    font-size: 13px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.document-actions button:hover,
+.document-actions a:hover,
+.document-action-button:hover {
+    background-color: #162d68;
+    text-decoration: none;
+}
+
+.document-empty-message {
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    color: #666;
+    font-size: 14px;
+}
+
+/* ==========================================
+   Employee Status Labels
+   ========================================== */
+
+.status-active,
+.employee-status-active {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background-color: #e5f5e9;
+    color: #218838;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.status-inactive,
+.employee-status-inactive {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background-color: #eceff1;
+    color: #687078;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* ==========================================
+   Sorting and Pagination Controls
+   ========================================== */
+
+.table-controls,
+.employee-list-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.table-controls label,
+.employee-list-controls label {
+    margin: 0;
+}
+
+.table-controls select,
+.employee-list-controls select,
+.table-controls input,
+.employee-list-controls input {
+    max-width: 100%;
+    padding: 9px 11px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 14px;
+}
+
+.pagination-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.pagination-controls button {
+    padding: 8px 12px;
+    border: 1px solid #d5d9e0;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #1f3c88;
+    cursor: pointer;
+}
+
+.pagination-controls button:hover:not(:disabled),
+.pagination-controls button.active {
+    background-color: #1f3c88;
+    color: #fff;
+}
+
+.pagination-controls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ==========================================
+   General Form Improvements
+   ========================================== */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    max-width: 100%;
+}
+
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    resize: vertical;
+}
+
+.form-group textarea:focus {
+    outline: none;
+    border-color: #8892ec;
+    box-shadow: 0 0 4px rgba(136, 146, 236, 0.3);
+}
+
+.form-buttons button:disabled,
+.document-actions button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ==========================================
+   Responsive Document and Table Layouts
+   ========================================== */
+
+@media (max-width: 900px) {
+    .employee-document-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .dashboard-cards {
+        flex-wrap: wrap;
+    }
+
+    .dashboard-card {
+        min-width: 220px;
+    }
+}
+
+@media (max-width: 600px) {
+    .employee-form,
+    .department-form,
+    .employee-edit-form,
+    .department-edit-form,
+    .employee-dashboard-card,
+    .employee-documents-card,
+    .document-list-container,
+    .employee-table-container,
+    .department-table-container {
+        padding: 18px;
+    }
+
+    .employee-document-list {
+        grid-template-columns: 1fr;
+    }
+
+    .form-buttons,
+    .employee-page-actions,
+    .employee-buttons,
+    .table-controls,
+    .employee-list-controls {
+        flex-wrap: wrap;
+    }
+
+    .search-container input,
+    .department-search input,
+    .employee-page-search input,
+    .edit-employee-search input {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .profile-information {
+        grid-template-columns: 1fr;
+    }
+
+    th,
+    td {
+        padding: 9px;
+        font-size: 13px;
+    }
+}
+
+
+/* ==========================================
+   Document rows and light-pink icon buttons
+   ========================================== */
+
+.employee-documents-card > p {
+    margin-bottom: 14px;
+}
+
+.employee-document-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.employee-document-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 10px 12px;
+    border: 1px solid #f0dce5;
+    border-radius: 6px;
+    background: #fffafb;
+}
+
+.employee-document-details {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+    min-width: 0;
+}
+
+.employee-document-label {
+    color: #30343b;
+    font-size: 14px;
+}
+
+.employee-document-status {
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.employee-document-status.uploaded {
+    color: #218838;
+}
+
+.employee-document-status.not-uploaded {
+    color: #7b818b;
+}
+
+.document-actions.document-icon-actions {
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 6px;
+}
+
+.document-icon-button {
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border: 1px solid #f0c8d9;
+    border-radius: 5px;
+    background: #fff0f5;
+    color: #d4779d;
+    cursor: pointer;
+    transition: background-color .15s ease, border-color .15s ease;
+}
+
+.document-icon-button svg {
+    width: 17px;
+    height: 17px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.document-icon-button:hover:not(:disabled) {
+    background: #fce0eb;
+    border-color: #e9a9c3;
+    color: #bd5e85;
+}
+
+.document-icon-button:disabled {
+    opacity: .38;
+    cursor: not-allowed;
+}
+
+.admin-document-cell {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.admin-document-cell .document-actions {
+    justify-content: center;
+}
+
+.document-not-uploaded {
+    color: #7b818b;
+    font-size: 12px;
+}
+
+/* ==========================================
+   Employee dashboard search spacing
+   ========================================== */
+
+.employee-dashboard-card > p {
+    margin-bottom: 14px;
+}
+
+.employee-dashboard-search {
+    margin-bottom: 8px;
+}
+
+.employee-dashboard-search input {
+    display: block;
+    margin-top: 3px;
+}
+
+.selected-employee[hidden] {
+    display: none !important;
+}
+
+.selected-employee {
+    margin-top: 10px;
+}
+
+/* Admin dashboard search spacing and compact result list */
+
+.search-container {
+    margin-bottom: 10px;
+}
+
+.search-container label {
+    display: block;
+    margin: 0 0 9px;
+}
+
+.search-container input {
+    display: block;
+    margin-top: 0;
+}
+
+.search-results:empty {
+    display: none;
+}
+
+/* Tables containing document actions need horizontal scrolling */
+
+.employee-table-container {
+    overflow-x: auto;
+}
+
+.employee-table-container table {
+    min-width: 1050px;
+}
+
+@media (max-width: 600px) {
+    .employee-document-row {
+        align-items: flex-start;
+    }
+
+    .employee-document-details {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3px;
+    }
+}
+
+/* ==========================================
+   Updated document upload, status and icon styling
+   ========================================== */
+
+/* A file input becomes light green after a valid file is selected.
+   The page JavaScript should add/remove the .file-uploaded class. */
+.form-group input[type="file"].file-uploaded,
+.form-group.file-uploaded input[type="file"] {
+    background-color: #e5f5e9;
+    border: 1px solid #9bd3aa;
+    color: #216e39;
+}
+
+.form-group input[type="file"].file-uploaded::file-selector-button,
+.form-group.file-uploaded input[type="file"]::file-selector-button {
+    background-color: #218838;
+    color: #fff;
+}
+
+/* Upload status text */
+.document-status.uploaded,
+.document-status.selected,
+.document-uploaded {
+    color: #218838;
+}
+
+/* Inactive status is light red, not green or grey. */
+.status-inactive,
+.employee-status-inactive {
+    background-color: #fde8e8;
+    color: #c62828;
+}
+
+/* Apply these classes to the status select based on its selected value. */
+.form-group select.status-active,
+select.status-active {
+    background-color: #e5f5e9;
+    border-color: #9bd3aa;
+    color: #218838;
+    font-weight: 600;
+}
+
+.form-group select.status-inactive,
+select.status-inactive {
+    background-color: #fde8e8;
+    border-color: #efaaaa;
+    color: #c62828;
+    font-weight: 600;
+}
+
+/* Keep the eye and download icons only: no button box or background. */
+.document-actions .document-icon-button,
+.document-icon-actions .document-icon-button,
+.admin-document-cell .document-icon-button {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    padding: 4px;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: #e6a0bd;
+    box-shadow: none;
+    outline: none;
+}
+
+.document-actions .document-icon-button svg,
+.document-icon-actions .document-icon-button svg,
+.admin-document-cell .document-icon-button svg {
+    width: 21px;
+    height: 21px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+}
+
+.document-actions .document-icon-button:hover:not(:disabled),
+.document-icon-actions .document-icon-button:hover:not(:disabled),
+.admin-document-cell .document-icon-button:hover:not(:disabled) {
+    background: transparent;
+    border: 0;
+    color: #d4779d;
+}
+
+.document-actions .document-icon-button:disabled,
+.document-icon-actions .document-icon-button:disabled,
+.admin-document-cell .document-icon-button:disabled {
+    background: transparent;
+    color: #e6a0bd;
+    opacity: 0.4;
+}
+
+
+/* ==========================================
+   FINAL EMPLOYEE DOCUMENT ROW SPACING
+   ========================================== */
+
+/* Employee dashboard:
+   Document name | filename | icons */
+
+.employee-document-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+}
+
+.employee-document-details {
+    display: grid;
+    grid-template-columns: minmax(150px, 0.9fr) minmax(180px, 1.4fr);
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+    gap: 24px;
+}
+
+.employee-document-label {
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.employee-document-status {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.document-actions.document-icon-actions {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    margin-left: 12px;
+}
+
+/* ==========================================
+   SAME ICON DESIGN ON BOTH DASHBOARDS
+   ========================================== */
+
+.document-icon-button,
+.document-actions .document-icon-button,
+.admin-document-cell .document-icon-button {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    padding: 5px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+
+    color: #e6a0bd;
+    cursor: pointer;
+}
+
+.document-icon-button svg,
+.document-actions .document-icon-button svg,
+.admin-document-cell .document-icon-button svg {
+    width: 23px;
+    height: 23px;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.document-icon-button:hover:not(:disabled) {
+    background: transparent;
+    color: #d4779d;
+}
+
+.document-icon-button:disabled {
+    background: transparent;
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* ==========================================
+   ADMIN DASHBOARD DOCUMENT COLUMNS
+   ========================================== */
+
+.admin-document-cell {
+    text-align: left;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.admin-document-cell .document-actions {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-left: 10px;
+}
+
+.admin-document-cell .document-filename {
+    display: inline-block;
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+}
+
+/* ==========================================
+   RESPONSIVE DOCUMENT LAYOUT
+   ========================================== */
+
+@media (max-width: 650px) {
+    .employee-document-row {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .employee-document-details {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .document-actions.document-icon-actions {
+        margin-left: 0;
+        gap: 18px;
+    }
+}
+
+
+/* ==================================================
+   EMPLOYEE DOCUMENTS - FINAL ALIGNED LAYOUT
+   ================================================== */
+
+#myDocumentsList {
+    width: 100%;
+}
+
+#myDocumentsList .employee-document-row {
+    display: grid !important;
+    grid-template-columns: 240px minmax(150px, 1fr) 40px 40px !important;
+    align-items: center !important;
+    column-gap: 16px !important;
+    width: 100%;
+    min-height: 58px;
+    padding: 8px 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    background: transparent;
+}
+
+/* Document name - first column */
+
+#myDocumentsList .employee-document-label {
+    grid-column: 1;
+    margin: 0;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+/* Filename - second column */
+
+#myDocumentsList .employee-document-status {
+    grid-column: 2;
+    min-width: 0;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Eye icon - third column */
+
+#myDocumentsList .employee-document-row > .document-icon-button:nth-of-type(1) {
+    grid-column: 3;
+}
+
+/* Download icon - fourth column */
+
+#myDocumentsList .employee-document-row > .document-icon-button:nth-of-type(2) {
+    grid-column: 4;
+}
+
+
+/* ==================================================
+   IDENTICAL ICONS ON BOTH DASHBOARDS
+   ================================================== */
+
+.document-icon-button {
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    padding: 5px !important;
+
+    border: none !important;
+    border-radius: 0 !important;
+
+    background: transparent !important;
+    box-shadow: none !important;
+
+    color: #e6a0bd !important;
+    cursor: pointer;
+}
+
+.document-icon-button svg {
+    display: block;
+    width: 23px !important;
+    height: 23px !important;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.document-icon-button:hover:not(:disabled) {
+    background: transparent !important;
+    color: #d4779d !important;
+}
+
+.document-icon-button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+
+/* ==================================================
+   ADMIN DASHBOARD DOCUMENT CELLS
+   ================================================== */
+
+td.document-cell {
+    vertical-align: middle;
+}
+
+.admin-document-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+    min-width: 0;
+}
+
+.admin-document-actions .document-filename {
+    flex: 1 1 auto;
+    min-width: 35px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.admin-document-actions .document-icon-button {
+    flex: 0 0 36px;
+}
+
+
+/* ==================================================
+   DOCUMENT UPLOAD SUCCESS
+   ================================================== */
+
+.form-group input[type="file"].file-uploaded,
+.form-group.file-uploaded input[type="file"] {
+    background-color: #e5f5e9;
+    border: 1px solid #9bd3aa;
+    color: #216e39;
+}
+
+.form-group input[type="file"].file-uploaded::file-selector-button,
+.form-group.file-uploaded input[type="file"]::file-selector-button {
+    background-color: #218838;
+    color: #ffffff;
+}
+
+.document-status.uploaded,
+.document-status.selected,
+.document-uploaded {
+    color: #218838;
+}
+
+
+/* ==================================================
+   EMPLOYEE STATUS COLORS
+   ================================================== */
+
+.status-active,
+.employee-status-active {
+    background-color: #e5f5e9;
+    color: #218838;
+}
+
+.status-inactive,
+.employee-status-inactive {
+    background-color: #fde8e8;
+    color: #c62828;
+}
+
+/* Status dropdown colors */
+
+.form-group select.status-active,
+select.status-active {
+    background-color: #e5f5e9;
+    border-color: #9bd3aa;
+    color: #218838;
+    font-weight: 600;
+}
+
+.form-group select.status-inactive,
+select.status-inactive {
+    background-color: #fde8e8;
+    border-color: #efaaaa;
+    color: #c62828;
+    font-weight: 600;
+}
+
+
+/* ==================================================
+   RESPONSIVE DOCUMENT LAYOUT
+   ================================================== */
+
+@media (max-width: 700px) {
+
+    #myDocumentsList .employee-document-row {
+        grid-template-columns:
+            minmax(120px, 1fr)
+            minmax(90px, 1fr)
+            34px
+            34px !important;
+
+        column-gap: 8px !important;
+    }
+
+    #myDocumentsList .employee-document-label {
+        white-space: normal;
+    }
+
+    .admin-document-actions {
+        gap: 5px;
+    }
+}
+
+
+
+/* ==================================================
+   EMPLOYEE MANAGEMENT - UPDATED STYLES
+   ================================================== */
+
+
+/* --------------------------------------------------
+   EMPLOYEE STATUS
+   -------------------------------------------------- */
+
+.status-active,
+.status-inactive {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.status-active {
+    color: #218838;
+    background-color: #e6f4ea;
+}
+
+.status-inactive {
+    color: #dc3545;
+    background-color: #fde8e8;
+}
+
+
+/* Status dropdown */
+
+#status.status-active {
+    color: #218838;
+    background-color: #e6f4ea;
+    border-color: #a8d5b5;
+}
+
+#status.status-inactive {
+    color: #dc3545;
+    background-color: #fde8e8;
+    border-color: #f1b0b7;
+}
+
+
+/* --------------------------------------------------
+   EMPLOYEE DOCUMENT TABLE COLUMNS
+   -------------------------------------------------- */
+
+.employee-table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.employee-table-container table {
+    min-width: 1250px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.employee-table-container th,
+.employee-table-container td {
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.document-cell {
+    text-align: center;
+    min-width: 150px;
+}
+
+.document-loading {
+    color: #888;
+    font-size: 12px;
+}
+
+
+/* --------------------------------------------------
+   DOCUMENT VIEW AND DOWNLOAD ICONS
+   -------------------------------------------------- */
+
+.document-actions.document-icon-actions {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    max-width: 100%;
+}
+
+.document-filename {
+    display: inline-block;
+    max-width: 85px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #555;
+    font-size: 11px;
+    vertical-align: middle;
+}
+
+.document-icon-button {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border: 1px solid #f0c8d9;
+    border-radius: 5px;
+    background-color: #fff0f5;
+    color: #d4779d;
+    cursor: pointer;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease,
+                color 0.2s ease;
+}
+
+.document-icon-button svg {
+    width: 17px;
+    height: 17px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.document-icon-button:hover {
+    background-color: #fce0eb;
+    border-color: #e9a9c3;
+    color: #bd5e85;
+}
+
+.document-icon-button:focus-visible {
+    outline: 2px solid #bd5e85;
+    outline-offset: 2px;
+}
+
+.document-icon-button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+
+/* --------------------------------------------------
+   EDIT EMPLOYEE BUTTON
+   -------------------------------------------------- */
+
+.edit-button {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #8892ec;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.edit-button:hover {
+    background-color: #6f78d4;
+}
+
+
+/* --------------------------------------------------
+   DEDICATED EDIT EMPLOYEE PAGE
+   -------------------------------------------------- */
+
+.employee-edit-form {
+    display: block;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 700px;
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.employee-edit-form h3 {
+    margin-bottom: 25px;
+    color: #1f3c88;
+}
+
+.employee-edit-form .form-group {
+    margin-bottom: 20px;
+}
+
+.employee-edit-form .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.employee-edit-form input,
+.employee-edit-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: white;
+}
+
+.employee-edit-form input:focus,
+.employee-edit-form select:focus {
+    outline: none;
+    border-color: #8892ec;
+    box-shadow: 0 0 4px rgba(136, 146, 236, 0.3);
+}
+
+.employee-edit-form input[readonly] {
+    background-color: #f0f2f5;
+    cursor: not-allowed;
+}
+
+
+/* --------------------------------------------------
+   EDIT FORM BUTTONS
+   -------------------------------------------------- */
+
+.employee-edit-form .form-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.employee-edit-form .form-buttons button {
+    padding: 11px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8892ec;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.employee-edit-form .form-buttons button:hover {
+    background-color: #6f78d4;
+}
+
+.employee-edit-form .form-buttons .cancel-button {
+    background-color: #777 !important;
+}
+
+.employee-edit-form .form-buttons .cancel-button:hover {
+    background-color: #555 !important;
+}
+
+
+/* --------------------------------------------------
+   RESPONSIVE EDIT PAGE
+   -------------------------------------------------- */
+
+@media (max-width: 768px) {
+    .employee-edit-form {
+        padding: 20px;
+    }
+
+    .employee-edit-form .form-buttons {
+        flex-wrap: wrap;
+    }
+
+    .employee-edit-form .form-buttons button {
+        flex: 1;
+    }
+
+    .employee-table-container table {
+        min-width: 1250px;
+    }
+}
+
+
+
+/* ==================================================
+   EMPLOYEE STATUS COLORS
+================================================== */
+
+/* Active status */
+.status-active {
+    display: inline-block;
+    color: #16803c;
+    background-color: #e2f5e8;
+    border: 1px solid #9bd7ad;
+    padding: 6px 13px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+/* Inactive status */
+.status-inactive {
+    display: inline-block;
+    color: #c62828;
+    background-color: #fde7e7;
+    border: 1px solid #f2aaaa;
+    padding: 6px 13px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+
+/* ==================================================
+   STATUS DROPDOWN
+================================================== */
+
+select#status,
+select#employeeStatus {
+    width: 100%;
+    padding: 13px 15px;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+/* Active option */
+select#status.status-active,
+select#employeeStatus.status-active {
+    color: #16803c;
+    background-color: #e2f5e8;
+    border-color: #9bd7ad;
+}
+
+/* Inactive option */
+select#status.status-inactive,
+select#employeeStatus.status-inactive {
+    color: #c62828;
+    background-color: #fde7e7;
+    border-color: #f2aaaa;
+}
+
+/* Dropdown options */
+select#status option,
+select#employeeStatus option {
+    background-color: #fff;
+    color: #222;
+}
+
+select#status option[value="Active"],
+select#employeeStatus option[value="Active"] {
+    color: #16803c;
+    background-color: #e2f5e8;
+}
+
+select#status option[value="Inactive"],
+select#employeeStatus option[value="Inactive"] {
+    color: #c62828;
+    background-color: #fde7e7;
+}
+
+
+/* ==================================================
+   DASHBOARD SEARCH AND FILTERS
+================================================== */
+
+.search-container,
+.filter-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.search-container input,
+.filter-container select {
+    min-width: 180px;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.search-container input:focus,
+.filter-container select:focus {
+    outline: none;
+    border-color: #2879d0;
+    box-shadow: 0 0 4px rgba(40, 121, 208, 0.2);
+}
+
+
+/* ==================================================
+   DEPARTMENT LIST
+================================================== */
+
+#departmentList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.department-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.department-item strong {
+    color: #214d91;
+    font-size: 16px;
+}
+
+.department-item span {
+    color: #666;
+    font-size: 14px;
+}
+
+
+/* ==================================================
+   DOCUMENT ACTION BUTTONS
+================================================== */
+
+.document-cell {
+    vertical-align: middle;
+    min-width: 140px;
+}
+
+.document-actions.document-icon-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.document-filename {
+    display: inline-block;
+    max-width: 110px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #16803c;
+    font-size: 13px;
+}
+
+.document-icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border: none;
+    background: transparent;
+    color: #e88bb5;
+    cursor: pointer;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.document-icon-button:hover {
+    color: #d34b8b;
+    transform: scale(1.1);
+}
+
+.document-icon-button svg {
+    display: block;
+}
+
+
+/* ==================================================
+   EMPLOYEE TABLE
+================================================== */
+
+.employee-table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 25px;
+}
+
+.employee-table-container table {
+    width: 100%;
+    min-width: 1250px;
+    border-collapse: collapse;
+}
+
+.employee-table-container th,
+.employee-table-container td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.employee-table-container th {
+    background-color: #f2f4f8;
+    font-weight: 600;
+}
+
+
+/* ==================================================
+   SEARCH RESULTS
+================================================== */
+
+.search-result {
+    padding: 10px 14px;
+    margin: 5px 0;
+    background-color: #f4f6fa;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-result:hover {
+    background-color: #e6edf8;
+}
+
+
+/* ==================================================
+   RESPONSIVE FILTERS
+================================================== */
+
+@media (max-width: 768px) {
+    .search-container,
+    .filter-container {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .search-container input,
+    .filter-container select {
+        width: 100%;
+    }
+
+    #departmentList {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* ==========================================
+   EMPLOYEE MANAGEMENT FILTERS
+   ========================================== */
+
+.employee-filters {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 25px 0;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.employee-page-search,
+.employee-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.employee-page-search {
+    flex: 1;
+    min-width: 250px;
+}
+
+.employee-filter {
+    min-width: 180px;
+}
+
+.employee-page-search label,
+.employee-filter label {
+    font-weight: 600;
+    color: #333;
+}
+
+.employee-page-search input,
+.employee-filter select {
+    width: 100%;
+    min-height: 42px;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+}
+
+.employee-page-search input:focus,
+.employee-filter select:focus {
+    outline: none;
+    border-color: #8892ec;
+    box-shadow: 0 0 4px rgba(136, 146, 236, 0.3);
+}
+
+/* ==========================================
+   EMPLOYEE STATUS BADGES
+   ========================================== */
+
+.status-active,
+.status-inactive {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.status-active {
+    background-color: #e5f5e9;
+    color: #218838;
+    border: 1px solid #9bd3aa;
+}
+
+.status-inactive {
+    background-color: #fde8e8;
+    color: #c62828;
+    border: 1px solid #efaaaa;
+}
+
+/* ==========================================
+   EMPLOYEE TABLE IMPROVEMENTS
+   ========================================== */
+
+.employee-table-container {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    overflow-x: auto;
+}
+
+.employee-table-container table {
+    width: 100%;
+    min-width: 850px;
+    border-collapse: collapse;
+}
+
+.employee-table-container th {
+    background-color: #f0f2f5;
+    color: #333;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.employee-table-container td,
+.employee-table-container th {
+    padding: 14px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.employee-table-container tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.employee-table-container td a {
+    color: #1f3c88;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.employee-table-container td a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================
+   ACTIVE SIDEBAR LINK
+   ========================================== */
+
+nav a.active {
+    background-color: #1f3c88;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+/* ==========================================
+   RESPONSIVE EMPLOYEE FILTERS
+   ========================================== */
+
+@media (max-width: 768px) {
+    .employee-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .employee-page-search,
+    .employee-filter {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .employee-page-actions {
+        flex-wrap: wrap;
+    }
+
+    section {
+        padding: 20px;
+    }
+}
+
+
+
+/* ==========================================
+   EDIT DEPARTMENT STATUS COLORS
+========================================== */
+
+.department-status {
+    font-weight: 600;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Active status */
+
+.department-status.status-active {
+    background-color: #e6f7ec;
+    color: #16803c;
+    border: 1px solid #a8dfba;
+}
+
+/* Inactive status */
+
+.department-status.status-inactive {
+    background-color: #fdeaea;
+    color: #c62828;
+    border: 1px solid #f2b8b8;
+}
+
+/* Dropdown options */
+
+.department-status option {
+    background-color: #ffffff;
+    color: #222222;
+}
+
+
+
+/* ==========================================
+   MY PROFILE - DOCUMENT UPLOAD DISPLAY
+========================================== */
+
+#documentUploadStatus {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+#documentUploadStatus .document-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 15px;
+    border: 1px solid #e2e5eb;
+    border-radius: 7px;
+    background: #ffffff;
+}
+
+#documentUploadStatus .document-item strong {
+    color: #30343b;
+    font-size: 14px;
+}
+
+#documentUploadStatus .document-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#documentUploadStatus .document-filename {
+    color: #218838;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+#documentUploadStatus .not-uploaded {
+    color: #777777;
+    font-size: 13px;
+}
+
+#documentUploadStatus .document-icon-button {
+    width: auto;
+    height: auto;
+    padding: 7px 13px;
+    border: 1px solid #1f3c88;
+    border-radius: 5px;
+    background: #1f3c88;
+    color: #ffffff;
+    font-size: 13px;
+}
+
+#documentUploadStatus .document-icon-button:hover {
+    background: #162d68;
+}
+
+@media (max-width: 600px) {
+    #documentUploadStatus .document-item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+
+
+/* ==========================================
+   DOCUMENT UPLOAD STATUS
+========================================== */
+
+.document-file-status {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 8px;
+    font-size: 13px;
+}
+
+.document-file-status.uploaded {
+    color: #16803c;
+    font-weight: 600;
+}
+
+.document-file-status.uploading {
+    color: #1f3c88;
+    font-weight: 600;
+}
+
+.document-file-status.not-uploaded {
+    color: #777;
+}
+
+.uploaded-file-name {
+    color: #16803c;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.document-action-button {
+    padding: 5px 12px;
+    border: 1px solid #16803c;
+    border-radius: 4px;
+    background: #e6f7ec;
+    color: #16803c;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.document-action-button:hover {
+    background: #c9efd5;
+}
+
+
+/* ==========================================
+   Required Field Indicator
+   ========================================== */
+
+.required-field::after {
+    content: " *";
+    color: #dc3545;
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   Form Validation
+   ========================================== */
+
+.form-group input:invalid:focus,
+.form-group select:invalid:focus,
+.form-group textarea:invalid:focus {
+    border-color: #dc3545;
+}
+
+/* Valid text fields retain the lavender highlight after submission. */
+.form-group input:valid,
+.form-group textarea:valid,
+.form-group select:valid:not(.status-active):not(.status-inactive) {
+    border-color: #8892ec;
+    box-shadow: 0 0 4px rgba(136, 146, 236, 0.3);
+}
+
+/* Keep the selected employment/department status color visible. */
+.form-group select.status-active,
+select.status-active {
+    background-color: #e2f5e8;
+    border: 1px solid #9bd7ad;
+    color: #16803c;
+    font-weight: 600;
+    box-shadow: none;
+}
+
+.form-group select.status-inactive,
+select.status-inactive {
+    background-color: #fde7e7;
+    border: 1px solid #f2aaaa;
+    color: #c62828;
+    font-weight: 600;
+    box-shadow: none;
+}
+
+
+/* ==========================================
+   Employee Profile Documents
+   ========================================== */
+
+.uploaded-file-name {
+    display: inline-block;
+    margin-right: 12px;
+    color: #333;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.document-action-button {
+    background-color: #1f3c88;
+    color: white;
+    border: none;
+    padding: 7px 12px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.document-action-button:hover {
+    background-color: #162d68;
+}
+
+
+/* ==========================================
+   Profile Document Status
+   ========================================== */
+
+#passportPhotoStatus,
+#aadhaarDocumentStatus,
+#panDocumentStatus {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #666;
+}
+
+
+/* ==========================================
+   Required and Invalid Inputs
+   ========================================== */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #8892ec;
+    box-shadow: 0 0 4px rgba(136, 146, 236, 0.3);
+}
+
+
+/* ==========================================
+   Profile Form Mobile Layout
+   ========================================== */
+
+@media (max-width: 768px) {
+
+    .employee-form {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .document-action-button {
+        padding: 7px 10px;
+    }
+
+    .uploaded-file-name {
+        max-width: 100%;
+    }
+
+}
+
+
+/* Active and Inactive dropdown colors */
+
+select#status.status-active {
+    background-color: #e2f5e8 !important;
+    border: 1px solid #9bd7ad !important;
+    color: #16803c !important;
+    font-weight: 600;
+}
+
+select#status.status-inactive {
+    background-color: #fde7e7 !important;
+    border: 1px solid #f2aaaa !important;
+    color: #c62828 !important;
+    font-weight: 600;
+}
